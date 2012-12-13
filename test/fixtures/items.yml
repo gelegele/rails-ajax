@@ -1,17 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  name: MyText
-  sex: MyString
-  birth: 2012-12-13
-  note: MyString
-  start_time: 2012-12-13 13:15:46
-  registered: false
-
-two:
-  name: MyText
-  sex: MyString
-  birth: 2012-12-13
-  note: MyString
-  start_time: 2012-12-13 13:15:46
-  registered: false
+<% 1.upto(9) do |n| %>
+item<%= n %>:
+  name: MyText<%= n %>
+  sex: MyString<%= n %>
+  birth: 2012-12-<%= n %>
+  note: MyString<%= n %>
+  start_time: 2012-12-1<%= n %> 13:15:46
+  registered: <%= n%2 == 0 ? false : true %>
+<% end %> 
