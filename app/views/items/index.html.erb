@@ -22,7 +22,7 @@
     <td><%= item.start_time %></td>
     <td><%= item.registered %></td>
     <td><%= link_to 'Show', item, remote: true %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Edit', edit_item_path(item), remote: true %></td>
     <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
   </tr>
 <% end %>
@@ -30,6 +30,7 @@
 
 <br />
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'New Item', new_item_path, remote: true %>
 
 <p id="result-name"></p>
+<p id="result-form"></p>
