@@ -1,0 +1,2 @@
+var tr = $("#tr-<%= escape_javascript(@item.id.to_s) %>");
+tr.hide('slow', function(){tr.remove();});

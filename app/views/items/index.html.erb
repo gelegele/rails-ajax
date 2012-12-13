@@ -14,7 +14,7 @@
   </tr>
 
 <% @items.each do |item| %>
-  <tr>
+  <tr id="tr-<%= item.id %>">
     <td><%= item.name %></td>
     <td><%= item.sex %></td>
     <td><%= item.birth %></td>
@@ -23,7 +23,7 @@
     <td><%= item.registered %></td>
     <td><%= link_to 'Show', item, remote: true %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
   </tr>
 <% end %>
 </table>

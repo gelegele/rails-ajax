@@ -79,6 +79,7 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to items_url }
       format.json { head :no_content }
+      format.js # destroy.js.erb
     end
   end
 end
