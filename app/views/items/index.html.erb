@@ -21,7 +21,7 @@
     <td><%= item.note %></td>
     <td><%= item.start_time %></td>
     <td><%= item.registered %></td>
-    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Show', item, remote: true %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -31,3 +31,5 @@
 <br />
 
 <%= link_to 'New Item', new_item_path %>
+
+<p id="result-name"></p>
