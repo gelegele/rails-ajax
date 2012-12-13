@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @item.name %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @item.sex %>
+</p>
+
+<p>
+  <b>Birth:</b>
+  <%= @item.birth %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @item.note %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @item.start_time %>
+</p>
+
+<p>
+  <b>Registered:</b>
+  <%= @item.registered %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
