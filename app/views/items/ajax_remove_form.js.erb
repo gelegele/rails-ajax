@@ -1,3 +1,15 @@
 var form = $("#result-form form:only-child");
-form.hide("slow", function(){form.remove();});
-// $("#tr-<%= escape_javascript(@item.id.to_s) %>").remove();
+form.hide("slow", function(){
+  form.remove();
+
+  var row = "<%= escape_javascript(render partial: 'row', locals: {:item => @item}) %>";
+  var tr = $("#tr-<%= escape_javascript(@item.id.to_s) %>");
+  if (0 < tr.length) { // exists?
+    // updated
+    tr.replaceWith(row);
+  } else {
+    // created
+    $('#item-table').append(row);
+  }
+});
+
